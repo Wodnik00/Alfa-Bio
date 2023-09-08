@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa Bio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Embed Do DC -->
+    <meta content="Alfa Bio" property="og:title" />
+    <meta content="Stoba Bio/LinkTree" property="og:description" />
+    <meta content="localhost" property="og:url" />
+    <meta content="https://cdn.discordapp.com/avatars/1142730979778240522/1f8a1a0450892cda3d2a2d6f1eeacd46.png?size=1024" property="og:image" />
+    <meta content="#000000" data-react-helmet="true" name="theme-color" />
+</head>
+<body>
+
+    <!--- Wiedo --->
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="assets/video/popek.mp4" type="video/mp4" />
+        </video>
+        <!--- Muzyka --->
+        <audio id="bgMusic" autoplay loop>
+            <source src="assets/music/popek.mp3" type="audio/mpeg"/>
+        </audio>
+        <div class="caption">
+            <div class="card-container">
+                <!-- Karta  -->
+                <div class="card">
+                    <!--- Logo/Avatar --->
+                    <div class="logo"><img src="https://avatars.githubusercontent.com/u/140760692?s=400&u=fd4a69472cadd3714f810a92bd2a389fb58b47d3&v=4" alt="Logo"></div>
+                    <!--- Nick --->
+                    <div class="nick">
+                        Wodnik
+                    </div>
+                    <!--- Linki --->
+                    <!--- Możesz pododawać własne --->
+                    <div class="icon-links">
+                        <a href="https://discordapp.com/users/1147546209943306420" class="icon-link" target="_blank"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.youtube.com/" class="icon-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://github.com/Wodnik00/" class="icon-link" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/" class="icon-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <!-- Mała karta z aktualną piosenką -->
+                    <div class="song-card">
+                        <div class="song-cover">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.ising.pl%2Fsongs%2F8987%2Fcover_640.jpg&f=1&nofb=1&ipt=cdf63d45f027ec9cf06f437805473d8ed585d33a85f815fc64258abc362357f7&ipo=images" alt="Okładka">
+                        </div>
+                    <div class="song-info">
+                    <div class="song-title">Wodospady</div>
+                       <div class="song-author">Popek & Matheo</div>
+                    </div>
+                    <!-- Karta do efektu glow (blasku) -->
+                    <div class="card-glow"></div>
+                    </div>
+
+                   <!-- Suwak do regulacji głośności -->
+                   <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1" oninput="changeVolume()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Strona Wykonana Przez Wodnik00 https://github.com/Wodnik00 Prosze o nie usuwanie tej wiadomośći -->
+
+    <script>
+        const bgMusic = document.getElementById('bgMusic');
+        const volumeSlider = document.getElementById('volumeSlider');
+
+        function changeVolume() {
+            bgMusic.volume = volumeSlider.value;
+        }
+    </script>
+
+</body>
+</html>

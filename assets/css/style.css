@@ -1,0 +1,140 @@
+body {
+  background-color: #000000;
+  font-family: Comfortaa;
+  text-shadow: 3px 3px 4px #020A15;
+  color: white;
+  margin: 0;
+  overflow: hidden;
+}
+
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.video-container .caption {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 550px; /* Szerkość Karty */
+  height: 300px; /* Wysokość Karty */
+  background-color: rgba(0, 0, 0, 0.7); /* Zmiana koloru */
+  color: white; /* Zmiana koloru tekstu */
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5); /* glow  */
+  backdrop-filter: blur(5px); /* blur  */
+}
+
+
+
+.logo img {
+  width: 100px; /* Dostosuj szerokość loga  */
+  height: 100px; /* Dostosuj wysokość loga  */
+  border-radius: 50%; /* Zaokrąglenie loga */
+  margin-top: 30px; /* Zwiększ odstęp między logiem a napisem z nickiem */
+  border: 2px solid white; /* Dodanie białej obramówki */
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); /* glow */
+}
+
+
+
+.nick {
+  margin-top: 10px; /* Zwiększ odstęp między napisem a ikonami */
+}
+
+.icon-links {
+  display: flex; /* Ustawienie kontenera na flexbox */
+  margin-top: 10px; /* Odstęp między ikonami odnośników */
+}
+
+.icon-link {
+  font-size: 24px; /* Dostosuj rozmiar ikon według potrzeb */
+  color: white; /* Zmiana koloru ikon na biały */
+  margin: 0 10px; /* Odstęp między ikonami */
+}
+
+#volumeSlider {
+  width: 200px; /* Szerokość suwaka */
+  height: 10px; /* Wysokość suwaka */
+  background-color: #333; /* Kolor tła */
+  border: none;
+  -webkit-appearance: none; /* Usunięcie domyślnego wyglądu na przeglądarkach WebKit */
+  appearance: none;
+  border-radius: 5px; /* Zaokrąglenie krawędzi */
+  outline: none; /* Usunięcie obramowania */
+}
+
+#volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Usunięcie domyślnego wyglądu kciuka na przeglądarkach WebKit */
+  appearance: none;
+  width: 20px; /* Szerokość kciuka */
+  height: 20px; /* Wysokość kciuka */
+  background-color: #fff; /* Kolor kciuka */
+  border-radius: 50%; /* Zaokrąglenie kciuka, aby uzyskać efekt okręgu */
+  cursor: pointer;
+  border: 2px solid #333; /* Obramowanie kciuka */
+}
+
+#volumeSlider::-webkit-slider-thumb:hover {
+  background-color: #888; /* Kolor kciuka po najechaniu myszą */
+}
+
+.song-card {
+  display: flex; /* Ustawienie na flexbox */
+  align-items: center; /* Wyrównanie w pionie */
+  position: relative; 
+  margin-bottom: 10px; /* Odstęp między małą kartą a sówakiem */
+}
+
+.song-cover img {
+  max-width: 50px; /* Maksymalna szerokość okładki */
+  max-height: 50px; /* Maksymalna wysokość okładki */
+  margin-right: 10px; /* Odstęp między okładką a informacjami o piosence */
+}
+
+.song-info {
+  flex-grow: 1; /* Rozciągnięcie, aby wypełnić dostępne miejsce */
+  margin-right: 10px; /* Odstęp między informacjami a linkami */
+}
+
+.card-glow {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid white; /* Grubość obramowania */
+  border-radius: 5px; /* Zaokrąglenie krawędzi karty */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Efekt glow */
+  pointer-events: none; /* Wyłączenie interakcji z kartą glow */
+}
